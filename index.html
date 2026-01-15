@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIKY.WEB.ID | Tutorial & Teknik Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 font-sans text-gray-900">
+    <nav class="bg-white shadow-md p-5 border-b-4 border-yellow-400">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-black tracking-tighter">FIKY.WEB.ID</h1>
+            <div class="space-x-4 font-bold text-sm">
+                <a href="#tool" class="text-blue-600">TOOL</a>
+                <a href="#blog" class="text-gray-600">TUTORIAL</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto p-6">
+        <section class="text-center py-12">
+            <h2 class="text-4xl font-extrabold mb-4">Teknik Digital & Solusi Iklan</h2>
+            <p class="text-lg text-gray-600">Dikelola langsung oleh <strong>Viky Castelo</strong>. Update harian untuk optimasi bisnis Anda.</p>
+        </section>
+
+        <section id="tool" class="bg-white p-8 rounded-3xl shadow-xl border border-gray-200 mb-12">
+            <h3 class="text-2xl font-bold mb-4 text-center">UID Checker Fast Mode</h3>
+            <div class="space-y-4">
+                <textarea id="uidInput" class="w-full p-4 border-2 border-gray-100 rounded-xl focus:border-yellow-400 outline-none" rows="5" placeholder="Masukkan daftar UID di sini..."></textarea>
+                <button onclick="checkUID()" class="w-full bg-black text-white font-bold py-4 rounded-xl hover:bg-gray-800 transition">CEK SEKARANG</button>
+                <div id="result" class="hidden p-4 bg-green-50 text-green-700 rounded-xl font-mono text-sm"></div>
+            </div>
+        </section>
+
+        <section id="blog" class="space-y-6">
+            <h3 class="text-xl font-black italic uppercase">Artikel Terbaru</h3>
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                <span class="text-xs font-bold text-yellow-500 uppercase">Teknik Ads</span>
+                <h4 class="text-xl font-bold mt-1">Cara Fix Checkpoint Akun Iklan Terbaru 2026</h4>
+                <p class="text-gray-500 mt-2 text-sm">Langkah demi langkah menyelamatkan akun iklan Anda dari banned permanen...</p>
+                <a href="#" class="inline-block mt-4 text-sm font-bold border-b-2 border-black">BACA SELENGKAPNYA</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-12 text-gray-400 text-xs tracking-widest uppercase">
+        &copy; 2026 FIKY.WEB.ID - Viky Castelo Digital Solution
+    </footer>
+
+    <script>
+        function checkUID() {
+            const input = document.getElementById('uidInput').value;
+            const resDiv = document.getElementById('result');
+            if(input) {
+                resDiv.classList.remove('hidden');
+                resDiv.innerText = "Processing " + input.split('\n').length + " UIDs... (Fiky Tool Active)";
+            }
+        }
+    </script>
+</body>
+</html>
